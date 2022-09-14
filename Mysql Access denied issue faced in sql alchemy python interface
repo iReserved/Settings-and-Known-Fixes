@@ -1,0 +1,17 @@
+While using sql alchemy orm with pymysql dialect i faced a authentication problem
+where the access to the database was denied everytime when requested.
+But at the same time the mysql database was completely responsive and functional when accesed through the terminal interface or via the database workbench like 
+Dbeaver coummunity edition.
+\\
+The main problem was that my password registered in the mysql users database conatained multi special characters.
+On closly reading the Sql ALchemy documentation i found that in order to pass special charecters in the password feild i need to convert them or escape
+them or parse them in to a differenet format.
+for that i used following code : 
+
+import urllib.parse
+a=urllib.parse.quote_plus("your password here")
+print(a)
+
+
+take the converted output and pass that mutated string in the password feild in the connection url.
+and now the access wont be denied.
