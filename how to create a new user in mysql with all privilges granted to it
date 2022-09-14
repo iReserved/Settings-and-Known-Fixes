@@ -11,3 +11,4 @@ flush privileges;
 
 
 At last we can also check the newly added user in the users table by :
+SELECT user,authentication_string,plugin,host FROM mysql.user;
