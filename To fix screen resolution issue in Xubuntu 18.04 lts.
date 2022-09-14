@@ -1,6 +1,6 @@
 Make a file named  10-monitor.conf in  (/etc/X11/xorg.conf.d/) location.
 
-and add the following to the created 10-monitor.conf file and save it.
+and add copy the following to the created 10-monitor.conf file and save it.
 
 Section "Monitor"
 
