@@ -1,0 +1,13 @@
+In new installation of mysql in linux , we get a user of ROOT which has all the privilges granted to it by default,
+but we will need a different user with all the privileges granted to it.
+
+For that we will :
+
+Sudo mysql 
+Type your sudo password.
+create user 'username'@'localhost'( or '%' ) identified with mysql_native_password by 'password';
+grant all privileges on *.* to 'username'@ 'localhost'( or '%' );
+flush privileges;
+
+
+At last we can also check the newly added user in the users table by :
