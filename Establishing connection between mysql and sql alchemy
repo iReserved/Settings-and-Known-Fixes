@@ -1,0 +1,18 @@
+In order to establish a connection between Sql Alchemy Orm and Mysql installation,
+it is recommended to download PYMYSql to work as a connector to mysql and python.
+
+then we use sql alchemy in following way to establish a connection in between.
+
+
+
+
+from sqlalchemy import create_engine
+
+engine =create_engine('mysql+pymysql://username:password@localhost/database_name')
+conn = engine.connect()
+
+
+
+The feild username will contain your username set for your mysql installation.
+The feild password will contain your set password for the user (remember to parse the paswword if it contains special characters like !@#$%^&*() )
+The feild database_name will contain your database created in mysql.
