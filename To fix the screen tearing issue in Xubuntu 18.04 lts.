@@ -1,0 +1,12 @@
+Make a file named 20-intel.conf and save it in (etc/X11/xorg.conf.d/) location
+and then copy the following to the created 20-intel.conf file and save it.
+
+
+
+Section "Device"
+
+   Identifier  "Intel Graphics"
+   Driver      "intel"
+   Option      "TearFree"    "true"
+
+EndSection
